@@ -125,7 +125,7 @@ export default function ProfilPage() {
                             <div className="absolute inset-0 rounded-full border-4 border-yellow-600 shadow-lg"></div>
                             <div className="w-full h-full rounded-full overflow-hidden bg-gray-200">
                                 <Image
-                                    src="/images/kenzo.png"
+                                    src="/images/astra-erased-cut.png"
                                     alt="Child Profile"
                                     width={128}
                                     height={128}
