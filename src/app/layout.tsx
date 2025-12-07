@@ -13,8 +13,8 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-    title: 'Undangan Khitanan Kenzo',
-    description: 'Bapak Supriyadi Arramdani & Bunda Reni Dwi Hastuti',
+    title: 'Undangan Khitanan Astra',
+    description: 'Alm. Bapak Fardi Satya Bhakti & Ibu Nining Yuli Astuti',
 };
 
 export default function RootLayout({
