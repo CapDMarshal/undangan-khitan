@@ -138,14 +138,14 @@ export default function ProfilPage() {
                             className="font-display text-2xl font-bold mb-4 text-darkBrown"
                             variants={itemVariants}
                         >
-                            Aufar Alif Al Kenzo
+                            Fardila Astra Adisakha
                         </motion.h2>
 
                         <motion.p
                             className="font-sans text-base text-darkBrown mb-6"
                             variants={itemVariants}
                         >
-                            Putra dari Bpk. Supriyadi A. & Bunda Reni Dwi H.
+                            Putra dari Alm. Bapak Fardi Satya B. & Ibu Nining Yuli A.
                         </motion.p>
 
                         <motion.p

@@ -41,8 +41,8 @@ function Countdown({ targetDate }: { targetDate: Date }) {
         }
 
         timerComponents.push(
-            <motion.div 
-                key={interval} 
+            <motion.div
+                key={interval}
                 className="flex flex-col items-center mx-1 p-2 bg-gradient-to-br from-yellow-600 to-yellow-700 text-white rounded-lg min-w-[55px] shadow-lg border border-yellow-500/30"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -58,7 +58,7 @@ function Countdown({ targetDate }: { targetDate: Date }) {
     return (
         <div className="flex justify-center mt-6">
             {timerComponents.length ? (
-                <motion.div 
+                <motion.div
                     className="flex justify-center gap-1"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -67,7 +67,7 @@ function Countdown({ targetDate }: { targetDate: Date }) {
                     {timerComponents}
                 </motion.div>
             ) : (
-                <motion.span 
+                <motion.span
                     className="text-xl text-darkBrown font-semibold"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -83,7 +83,7 @@ function Countdown({ targetDate }: { targetDate: Date }) {
 export default function EventPage() {
     const [isVisible, setIsVisible] = useState(false);
     // Tanggal target untuk countdown (Sabtu, 11 Agustus 2025, 10.00 AM)
-    const targetDate = new Date('2025-08-11T10:00:00');
+    const targetDate = new Date('2025-12-21T10:00:00');
 
     useEffect(() => {
         setIsVisible(true);
@@ -206,29 +206,30 @@ export default function EventPage() {
                             >
                                 Akan dilaksanakan pada:
                             </motion.p>
-                            
+
                             <motion.div
                                 className="space-y-2 mb-4"
                                 variants={itemVariants}
                             >
                                 <p className="font-display text-3xl font-bold">
-                                    Senin
+                                    Minggu
                                 </p>
                                 <p className="font-display text-xl font-bold text-yellow-700">
-                                    11 Agustus 2025
+                                    21 Desember 2025
                                 </p>
                                 <p className="font-sans text-base font-semibold">
-                                    10.00 AM - Selesai
+                                    10.00 WIB - 14.00 WIB
                                 </p>
                             </motion.div>
-                            
+
                             <motion.div
                                 className="pt-4 border-t border-yellow-600/30"
                                 variants={itemVariants}
                             >
                                 <p className="font-sans text-sm leading-relaxed">
-                                    📍 Ds. Randusari RT 02 RW 02<br />
-                                    Kec. Pagerbarang Kab. Tegal
+                                    📍 Dsn. Kauman RT 03 RW 07<br />
+                                    Kel. Medari Kec. Ngadirejo<br />
+                                    Kab. Temanggung
                                 </p>
                             </motion.div>
                         </motion.div>

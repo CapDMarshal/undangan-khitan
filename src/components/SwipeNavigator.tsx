@@ -13,8 +13,6 @@ const routes = [
     '/profil',
     '/event',
     '/maps',
-    '/gift',
-    '/gallery',
     '/thanks'
 ];
 
@@ -41,7 +39,7 @@ export default function SwipeNavigator({ children }: SwipeNavigatorProps) {
             newIndex = currentIndex > 0 ? currentIndex - 1 : routes.length - 1;
         }
         router.push(routes[newIndex]);
-        
+
         // Reset countdown when manually navigating
         if (isAutoNavigating) {
             setCountdown(15);
@@ -65,7 +63,7 @@ export default function SwipeNavigator({ children }: SwipeNavigatorProps) {
     useEffect(() => {
         if (isAutoNavigating) {
             setCountdown(15);
-            
+
             intervalRef.current = setInterval(() => {
                 navigateToPage('next');
                 setCountdown(15); // Reset countdown
@@ -180,13 +178,13 @@ export default function SwipeNavigator({ children }: SwipeNavigatorProps) {
                 className="w-full h-full relative"
             >
                 {children}
-                
+
                 {/* Swipe indicators */}
                 {swipeDirection && (
                     <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-30">
                         <div className="bg-black bg-opacity-50 rounded-full p-4">
-                            {swipeDirection === 'left' ? 
-                                <ChevronRight size={40} className="text-white" /> : 
+                            {swipeDirection === 'left' ?
+                                <ChevronRight size={40} className="text-white" /> :
                                 <ChevronLeft size={40} className="text-white" />
                             }
                         </div>
@@ -216,9 +214,8 @@ export default function SwipeNavigator({ children }: SwipeNavigatorProps) {
                 {routes.map((_, index) => (
                     <div
                         key={index}
-                        className={`w-2 h-2 rounded-full transition-colors duration-300 ${
-                            index === currentIndex ? 'bg-darkBrown' : 'bg-brownAccent opacity-50'
-                        }`}
+                        className={`w-2 h-2 rounded-full transition-colors duration-300 ${index === currentIndex ? 'bg-darkBrown' : 'bg-brownAccent opacity-50'
+                            }`}
                     />
                 ))}
             </div>

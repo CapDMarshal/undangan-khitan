@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
+import { MessageCircle } from 'lucide-react';
 
 export default function ThanksPage() {
     const [isVisible, setIsVisible] = useState(false);
@@ -112,14 +113,14 @@ export default function ThanksPage() {
                         className="relative z-10 bg-white/10 backdrop-blur-sm rounded-2xl p-8 mx-4 border border-white/20 shadow-2xl text-center max-w-sm"
                         variants={itemVariants}
                     >
-                        <motion.h1 
+                        <motion.h1
                             className="font-playfair text-4xl font-bold mb-6 text-amber-900"
                             variants={itemVariants}
                         >
                             Terima Kasih
                         </motion.h1>
 
-                        <motion.p 
+                        <motion.p
                             className="font-poppins text-base leading-relaxed text-amber-800 mb-8"
                             variants={itemVariants}
                         >
@@ -127,7 +128,7 @@ export default function ThanksPage() {
                             teman-teman berkenan hadir dan memberikan do'a restu.
                         </motion.p>
 
-                        <motion.div 
+                        <motion.div
                             className="space-y-2"
                             variants={itemVariants}
                         >
@@ -135,13 +136,29 @@ export default function ThanksPage() {
                                 Hormat Kami,
                             </p>
                             <p className="font-playfair text-xl font-bold text-amber-900 leading-tight">
-                                Bpk. Supriyadi Arramdani<br />
-                                & Bunda Reni Dwi Hastuti
+                                Alm. Fardi Satya B.<br />
+                                & Nining Yuli A.
                             </p>
                         </motion.div>
 
+                        {/* WhatsApp Confirmation Button */}
+                        <motion.div
+                            className="mt-8"
+                            variants={itemVariants}
+                        >
+                            <a
+                                href="https://wa.me/6281282563191?text=Keluarga%20dari%20[Nama]%20akan%20hadir%20pada%20acara%20khitan."
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center space-x-2 bg-[#25D366] hover:bg-[#128C7E] text-white px-6 py-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105"
+                            >
+                                <MessageCircle size={20} />
+                                <span className="font-semibold">Konfirmasi Kehadiran</span>
+                            </a>
+                        </motion.div>
+
                         {/* Music Credit */}
-                        <motion.div 
+                        <motion.div
                             className="mt-8 pt-6 border-t border-amber-200/30"
                             variants={itemVariants}
                         >

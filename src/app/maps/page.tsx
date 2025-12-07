@@ -8,8 +8,8 @@ import { LucideLocate } from 'lucide-react';
 export default function MapsPage() {
     const [isVisible, setIsVisible] = useState(false);
     // Koordinat lokasi dari: 7°00'06.7"S 109°03'59.5"E
-    const latitude = -7.001861;
-    const longitude = 109.066528;
+    const latitude = -7.2579588;
+    const longitude = 110.0711872;
 
     // Link Google Maps untuk iframe (sematkan)
     const googleMapsSimpleEmbedUrl = `https://maps.google.com/maps?q=${latitude},${longitude}&hl=en&z=14&output=embed`;
@@ -172,8 +172,9 @@ export default function MapsPage() {
                             variants={itemVariants}
                         >
                             <p className="font-sans text-base leading-relaxed text-darkBrown">
-                                📍 Ds. Randusari RT 02 RW 02<br />
-                                Kec. Pagerbarang Kab. Tegal
+                                📍 Dsn. Kauman RT 03 RW 07<br />
+                                Kel. Medari Kec. Ngadirejo<br />
+                                Kab. Temanggung
                             </p>
                         </motion.div>
 
